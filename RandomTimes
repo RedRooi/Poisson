@@ -1,0 +1,14 @@
+import math
+import random
+
+TimeElapsed = 0
+NoOfThings = 0
+x = int(raw_input('How many time interverls do you want to generate?'))
+rateParameter = int(raw_input('What is the average number of things per time interval?'))
+
+while TimeElapsed <= x:
+    PRan = -math.log(1.0 - random.random()) / rateParameter
+    TimeElapsed = TimeElapsed + PRan
+    NoOfThings += 1
+    print PRan, TimeElapsed
+print NoOfThings
